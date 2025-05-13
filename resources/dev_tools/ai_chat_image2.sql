@@ -1,0 +1,2 @@
+INSERT INTO `openai_chat_category` (`name`, `short_name`, `slug`, `description`, `role`, `human_name`, `helps_with`, `prompt_prefix`, `image`, `color`, `created_at`, `updated_at`, `chat_completions`, `plan`, `category`) VALUES
+('Chat Image', 'CI', 'ai_chat_image', 'Image Generator', 'Image Generator', 'Image Generator', 'I can assist to generate image by user input', 'As a Pdf AI,', 'assets/img/vision.png', '#EDBBBE', '2023-05-16 03:34:57', '2023-05-16 03:39:11', '[{"role": "system", "content": "You are a Chat Image assistant."}]', '', '');

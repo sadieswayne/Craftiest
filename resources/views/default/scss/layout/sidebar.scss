@@ -1,0 +1,10 @@
+.has-sidebar {
+
+	.lqd-page-wrapper {
+		@apply lg:pe-[--sidebar-width];
+	}
+
+	.container {
+		width: 100%;
+	}
+}

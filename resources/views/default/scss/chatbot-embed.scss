@@ -1,0 +1,183 @@
+@config "../../../../tailwind.chatbot-embed.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+	:root {
+		--background: 240 25% 98%;
+		--foreground: 216 11% 45%;
+		--heading-background: 0 0% 100%;
+		--heading-foreground: 213 13% 14%;
+
+		--font-body: 'Golos Text';
+		--font-heading: 'Onest';
+
+		--headings-font-family: theme('fontFamily.heading');
+		--headings-line-height: 1.25rem;
+		--headings-font-weight: 600;
+		--headings-text-transform: ;
+		--headings-letter-spacing: ;
+		--headings-color: hsl(var(--heading-foreground));
+
+		--h1-font-size: 5.25rem; // 84px
+		--h1-line-height: 4.8125rem; // 77px
+		--h1-letter-spacing: -0.05em;
+		--h1-font-weight: 700;
+
+		--h2-font-size: 3.3125rem; // 53px
+		--h2-line-height: 1;
+		--h2-letter-spacing: -0.03em;
+		--h2-font-weight: 700;
+
+		--h3-font-size: 2.4375rem; // 39px
+		--h3-line-height: 1.1;
+		--h3-letter-spacing: -0.03em;
+		--h3-font-weight: 700;
+
+		--h4-font-size: 1.125rem; // 18px
+		--h4-line-height: 1;
+		--h4-letter-spacing: -0.01em;
+		--h4-font-weight: 500;
+
+		--h5-font-size: 1rem;
+		--h5-line-height: 1;
+		--h5-letter-spacing: -0.01em;
+		--h5-font-weight: 500;
+
+		--h6-font-family: theme('fontFamily.body');
+		--h6-font-size: 0.9375rem; // 15px
+		--h6-line-height: 1;
+		--h6-font-weight: 500;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--headings-font-family);
+		line-height: var(--headings-line-height);
+		font-weight: var(--headings-font-weight);
+		font-style: var(--headings-font-style);
+		text-transform: var(--headings-text-transform);
+		letter-spacing: var(--headings-letter-spacing);
+		color: var(--headings-color);
+	}
+
+	@for $i from 1 through 6 {
+		h#{$i} {
+			font-family: var(--h#{$i}-font-family, var(--headings-font-family));
+			font-size: var(--h#{$i}-font-size, var(--headings-font-size));
+			line-height: var(--h#{$i}-line-height, var(--headings-line-height));
+			font-weight: var(--h#{$i}-font-weight, var(--headings-font-weight));
+			font-style: var(--h#{$i}-font-style, var(--headings-font-style));
+			text-transform: var(--h#{$i}-text-transform, var(--headings-text-transform));
+			letter-spacing: var(--h#{$i}-letter-spacing, var(--headings-letter-spacing));
+			color: var(--h#{$i}-color, var(--headings-color));
+		}
+	}
+
+	@media (max-width: 767px) {
+
+		:root {
+			--h1-font-size: 4.3125rem; // 69px
+		}
+	}
+
+	@media (max-width: 479px) {
+
+		:root {
+			--h1-font-size: 16vw;
+		}
+
+		h1 svg {
+			width: 0.55em;
+		}
+	}
+}
+
+@layer components {
+
+	.dot {
+		@apply inline-block size-1 mx-1 align-middle bg-current rounded-full opacity-40;
+	}
+
+	@media (max-width: 1199px) {
+
+		.container {
+			@apply px-4;
+		}
+	}
+
+	@import './components/outline-glow';
+}
+
+@layer utilities {
+	@keyframes gradient-animation {
+		0% {
+			background-position: 0% 100%;
+		}
+
+		100% {
+			background-position: 100% 100%;
+		}
+	}
+
+	.banner-bg {
+		background: linear-gradient(120deg,
+				#70acd4 0%,
+				#ca71ff 20%,
+				#8469cc 30%,
+				#4882e6 50%,
+				#8469cc 70%,
+				#70acd4 100%);
+		background-size: 200% 200%;
+		animation: gradient-animation 20s ease-in-out alternate infinite;
+	}
+}
+
+.page-loaded {
+
+	.banner-title {
+
+		.lqd-split-text-words {
+			--tw-blur: blur(0px);
+			--tw-translate-x: 0 !important;
+			--tw-translate-y: 0 !important;
+			--tw-scale-x: 1;
+			--tw-scale-y: 1;
+			opacity: 1;
+		}
+
+		@for $i from 0 through 7 {
+			.lqd-split-text-words:nth-child(#{$i + 1}) {
+				transition-delay: ($i * 0.07) + s;
+			}
+		}
+	}
+
+	.banner-title-gradient {
+		transform: translate(100%, 50%);
+		transition: transform 3.5s 1s, opacity 0.3s 2.1s;
+		opacity: 0;
+	}
+}
+
+@media (max-width: 575px) {
+
+	:root {
+		--h2-font-size: 2.1875rem; // 35px
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+
+	.lqd-chatbot {
+		--heading-background: 220 8% 15%;
+		--heading-foreground: 0 0% 100%;
+	}
+}

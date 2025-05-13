@@ -1,0 +1,23 @@
+.page-pretitle {
+	margin-bottom: 1.15em;
+	font-size: 0.8125rem;
+	text-transform: none;
+	letter-spacing: normal;
+	font-weight: var(--tblr-font-weight-normal);
+}
+
+.page-title {
+	--tblr-font-weight-bold: 700;
+	margin-bottom: 0.36em;
+	font-size: 2.357em;
+	color: var(--lqd-heading-color);
+}
+
+.page-wrapper {
+
+	.page-header {
+		--tblr-content-padding: 1.5rem;
+		padding-bottom: 1.25rem;
+		border-bottom: var(--tblr-border-width) solid var(--tblr-border-color);
+	}
+}

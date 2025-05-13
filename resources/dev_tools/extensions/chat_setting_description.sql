@@ -1,0 +1,1 @@
+UPDATE `extensions` SET `description` = 'Effortlessly train custom chatbots created by end users with websites, PDFs, Q&A or even text.' WHERE `slug` = 'chat-setting';

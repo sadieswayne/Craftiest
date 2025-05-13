@@ -1,0 +1,7 @@
+.lqd-number-counter-numbers-col {
+	mask-image: linear-gradient(to bottom, transparent var(--mask-h), black calc(var(--mask-h) + 0.1lh), black calc(100% - var(--mask-h)), transparent calc(100% - var(--mask-h) + 0.1lh));
+}
+
+.lqd-number-counter {
+	--mask-h: 0.25lh;
+}

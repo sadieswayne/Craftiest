@@ -1,0 +1,50 @@
+{
+  "$schema": "https://laravel-ide.com/schema/laravel-ide-v2.json",
+  "view": {
+    "paths": [
+      {
+        "path": "resources/views/classic",
+        "namespace": ""
+      },
+      {
+        "path": "resources/views/creative",
+        "namespace": ""
+      },
+      {
+        "path": "resources/views/dark",
+        "namespace": ""
+      },
+      {
+        "path": "resources/views/default",
+        "namespace": ""
+      },
+      {
+        "path": "resources/views/magic-works",
+        "namespace": ""
+      },
+      {
+        "path": "resources/views/myai-tools",
+        "namespace": ""
+      },
+      {
+        "path": "resources/views/neura",
+        "namespace": ""
+      },
+      {
+        "path": "resources/views/sleek",
+        "namespace": ""
+      }
+    ]
+  },
+  "completions": [
+    {
+      "complete": "viewName",
+      "condition": [
+        {
+          "parameters": [1],
+          "functionNames": ["viewName"]
+        }
+      ]
+    }
+  ]
+}

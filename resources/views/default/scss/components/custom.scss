@@ -1,0 +1,13 @@
+.progress_bar {
+	background: linear-gradient(to bottom right, #82e2f4, #8a8aed);
+}
+
+.spinner_button:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to right, #8d65e9, #5391e4, #6bcd94);
+}

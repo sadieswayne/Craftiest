@@ -1,0 +1,63 @@
+.popover__title {
+    font-size: 24px;
+    line-height: 36px;
+    text-decoration: none;
+    color: rgb(228, 68, 68);
+    text-align: center;
+    padding: 15px 0;
+}
+
+.popover__wrapper {
+    position: relative;
+    margin-top: 1.5rem;
+    display: inline-block;
+}
+
+.popover__back {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.26);
+    z-index: 51;
+    left: 0;
+    top: 0;
+}
+
+.popover__content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: calc(-250px);
+    transform: translate(0, 15px);
+    background-color: var(--tblr-bg-surface);
+    padding: 10px;
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    min-width: 250px;
+}
+
+.popover__content:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: calc(10% - 10px);
+    top: -8px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent  var(--tblr-bg-surface) transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.popover__wrapper .popover__content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 10px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+    z-index: 52;
+}
+
+.popover__message {
+    text-align: left;
+    padding-left: 10px;
+}

@@ -1,0 +1,46 @@
+@media (min-width: theme('screens.lg')) {
+
+	.focus-mode {
+
+		&,
+		.lqd-page,
+		.lqd-page-wrapper {
+			min-height: 100vh;
+		}
+
+		.container,
+		.container-fluid {
+			max-width: 1400px;
+		}
+
+		.lqd-header .header-search-container,
+		.lqd-navbar,
+		.lqd-navbar-expander,
+		.lqd-page-footer,
+		.lqd-titlebar-pretitle,
+		.lqd-titlebar-subtitle,
+		.lqd-titlebar-title,
+		.lqd-titlebar-actions:not(:has(.doc-share-dropdown, .reset-wizard-btn)),
+		.lqd-titlebar .lqd-remaining-credit,
+		.lqd-titlebar-col-actions:has( > .lqd-btn:first-child + .lqd-btn:last-child ), // if there's only 2 buttons
+		.lqd-titlebar :has( > .lqd-remaining-credit:only-child),
+		.lqd-titlebar:not(:has(.lqd-titlebar-after, .lqd-docs-view-toggle, .doc-share-dropdown, .reset-wizard-btn)) {
+			display: none;
+		}
+
+		.lqd-titlebar-container {
+			row-gap: 0;
+		}
+
+		.lqd-docs-view-toggle {
+
+			&.lg\:-mb-16 {
+				margin-top: 0;
+				margin-bottom: -1.5rem;
+			}
+		}
+
+		@import './components/chat.scss';
+		@import './components/generators.scss';
+	}
+}

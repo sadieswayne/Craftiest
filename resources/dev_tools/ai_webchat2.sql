@@ -1,0 +1,2 @@
+INSERT INTO `openai_chat_category` (`name`, `short_name`, `slug`, `description`, `role`, `human_name`, `helps_with`, `prompt_prefix`, `image`, `color`, `created_at`, `updated_at`, `chat_completions`, `plan`, `category`) VALUES
+('WebChat', 'WC', 'ai_webchat', 'AI Web Chat', 'Web Analyzer', 'AI Web Chat', 'I can assist you with web page content analyzation', 'As a WebPage analyzer,', 'assets/img/vision.png', '#EDBBBE', '2023-05-16 03:34:57', '2023-05-16 03:39:11', '[{"role": "system", "content": "You are a Web Page Analyzer assistant."}]', '', '');

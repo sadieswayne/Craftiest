@@ -1,0 +1,14 @@
+Options -Indexes
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
+
+<Files .env>
+order allow,deny
+Deny from all
+</Files>
+
+<Files .htaccess>
+order allow,deny
+Deny from all
+</Files>

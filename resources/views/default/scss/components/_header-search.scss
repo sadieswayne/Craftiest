@@ -1,0 +1,25 @@
+@keyframes search-border-play {
+	0% {
+		transform: rotate(0);
+	}
+
+	10% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: rotate(360deg);
+		opacity: 0;
+	}
+}
+
+.header-search-border-play-inner {
+	--color-1: #A2A4EF;
+	--color-2: #1EC59F;
+	background: conic-gradient(from 0deg, transparent 0%, var(--color-1) 10%, var(--color-2) 20%, transparent 30%);
+	animation: search-border-play 4.5s linear 1;
+}

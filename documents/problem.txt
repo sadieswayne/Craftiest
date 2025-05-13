@@ -1,0 +1,4 @@
+1. resources/views/default/panel/user/finance/subscriptionStatus.blade.php
+2. resources/views/default/panel/layout/header.blade.php - burdaki gecikmenin sebebi de "credit-list.blade.php"
+3. resources/views/default/components/credit-list.blade.php
+4. resources/views/classic/components/header.blade.php

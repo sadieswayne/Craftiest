@@ -1,0 +1,87 @@
+@property --animating-word-y {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 0px;
+}
+
+.animated-word {
+
+	&.done-signal {
+		display: none;
+	}
+
+	a & {
+		text-decoration: inherit;
+	}
+}
+
+code.animated-word,
+a.animated-word {
+
+	.animated-word+& {
+		@apply ms-[0.5ch]
+	}
+
+	+.animated-word {
+		@apply ms-[0.5ch]
+	}
+}
+
+.animating-words {
+
+	.animated-word {
+
+		&:not(.animated) {
+			opacity: 0;
+			transform: translateX(3px);
+			filter: blur(2px);
+		}
+	}
+}
+
+.chat-content {
+
+	code:not([class*=language-]) {
+		@apply bg-background rounded px-1 py-0.5 text-primary font-semibold text-2xs font-mono;
+	}
+
+	blockquote {
+
+		> :first-child {
+			margin-top: 0;
+		}
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	li {
+
+		>p:only-child {
+			@apply my-0;
+		}
+	}
+}
+
+.lqd-chat-ai-bubble {
+
+	&.animating-words {
+		transition: --animating-word-y 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+		.chat-content-container {
+
+			&:before {
+				mask-image: linear-gradient(to bottom, black var(--animating-word-y), transparent calc(var(--animating-word-y) + 4lh + 2rem));
+			}
+		}
+
+		li {
+			transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+			&:not(:has(:where(.animated, .animating))) {
+				opacity: 0;
+			}
+		}
+	}
+}

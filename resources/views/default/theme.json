@@ -1,0 +1,53 @@
+{
+	"name": "default",
+	"extends": "",
+	"asset-path": "themes\/default",
+	"wideLayoutPaddingX": "",
+	"defaultVariations": {
+		"button": {
+			"variant": "primary",
+			"hoverVariant": "none",
+			"size": "md"
+		},
+		"card": {
+			"variant": "outline",
+			"size": "md",
+			"roundness": "default"
+		},
+		"table": {
+			"variant": "outline"
+		}
+	},
+	"dashboard": {
+		"supportedColorSchemes": "all",
+		"sidebarEnabledPages": [],
+		"googleFonts": {
+			"Inter": [
+				"400",
+				"500",
+				"600"
+			],
+			"Golos+Text": [
+				"400",
+				"500",
+				"600",
+				"700"
+			]
+		}
+	},
+	"landingPage": {
+		"googleFonts": {
+			"Golos+Text": [
+				"400",
+				"500",
+				"600",
+				"700"
+			],
+			"Onest": [
+				"400",
+				"500",
+				"700"
+			]
+		}
+	}
+}

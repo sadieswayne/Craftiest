@@ -1,0 +1,35 @@
+.ai-tools-dropdown {
+	--navbar-link-pt: theme('size.3');
+	--navbar-link-pb: theme('size.3');
+	--navbar-icon-size: 1.5rem;
+
+	.ai-tools-list {
+
+		.lqd-navbar-link {
+			flex-direction: column;
+			height: 100%;
+			align-items: center;
+			text-align: center;
+			justify-content: space-between;
+
+			&.active {
+				@apply dark:bg-navbar-background-active/5 dark:before:content-none;
+			}
+		}
+		.lqd-nav-link-label {
+			background-color: transparent;
+			box-shadow: none;
+			opacity: 1;
+			visibility: visible;
+			position: relative;
+			inset: auto;
+			transform: none;
+			white-space: normal;
+			width: auto;
+		}
+	}
+
+	.lqd-dropdown-dropdown-content {
+		@apply min-w-80 max-h-[450px];
+	}
+}

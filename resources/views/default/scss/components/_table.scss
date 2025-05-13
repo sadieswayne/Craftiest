@@ -1,0 +1,40 @@
+td,
+th {
+	@apply transition-colors py-3 px-4;
+}
+
+th {
+	text-align: start;
+}
+
+tr {
+	@apply transition-colors;
+
+	&:last-child {
+
+		td {
+			border-bottom: none;
+		}
+	}
+}
+
+.table-vcenter {
+
+	> :not(caption)>*>* {
+		padding: 1.1rem;
+	}
+}
+
+.table {
+
+	thead {
+
+		th {
+			padding-top: 1.75em;
+			padding-bottom: 1.05em;
+			border-color: var(--tblr-border-color);
+			background: none;
+			font-weight: var(--tblr-font-weight-medium);
+		}
+	}
+}

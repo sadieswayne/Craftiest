@@ -1,0 +1,394 @@
+div.tox {
+	color: unset !important;
+	border: none;
+
+	p {
+		color: unset !important;
+		background: none !important;
+	}
+
+	.tox-tbtn--bespoke,
+	.tox-promotion,
+	.tox-toolbar,
+	.tox-menubar {
+		background: none;
+	}
+
+	.tox-toolbar__primary {
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		padding-bottom: 0;
+		background: none;
+	}
+
+	.tox-tbtn__select-label {
+		cursor: inherit;
+	}
+
+	.tox-toolbar__group {
+		padding: 0;
+		flex-wrap: nowrap;
+	}
+
+	.tox-edit-area__iframe {
+		background: none;
+	}
+
+	.tox-collection__item {
+		cursor: pointer;
+		color: inherit;
+	}
+
+	.tox-collection__item-icon:empty {
+		display: none !important;
+	}
+
+	.tox-tbtn--select {
+		margin: 0;
+	}
+
+	.tox-tbtn:focus:not(.tox-tbtn--disabled),
+	.tox-tbtn,
+	.tox-collection__item-caret {
+
+		svg {
+			fill: currentColor;
+		}
+	}
+
+	.tox-tbtn,
+	.tox-collection__item-caret {
+
+		&:hover {
+
+			svg {
+				fill: currentColor;
+			}
+		}
+	}
+
+	.tox-tbtn {
+        width: 24px;
+        height: 24px;
+    }
+
+	.tox-mbtn,
+	.tox-tbtn {
+		color: inherit;
+
+		&:focus:not(.tox-tbtn--disabled),
+		&:hover:not(:disabled):not(.tox-mbtn--active),
+		&--active,
+		&--active:hover,
+		&:hover,
+		&:active,
+		&:focus {
+			background: hsl(var(--foreground) / 10%);
+			color: hsl(var(--foreground));
+		}
+		&--enabled,
+		&--enabled:hover {
+			background: hsl(var(--primary) / 10%);
+			color: hsl(var(--primary));
+		}
+	}
+
+	.tox-tbtn__icon-wrap {
+		max-width: 100%;
+	}
+
+	.tox-collection--toolbar {
+
+		.tox-collection__item--active {
+			background-color: hsl(var(--foreground) / 10%);
+
+			&:not(.tox-collection__item--state-disabled) {
+				color: hsl(var(--foreground));
+			}
+		}
+	}
+
+	.tox-split-button {
+
+		&:focus {
+			background: hsl(var(--foreground) / 10%);
+			color: hsl(var(--foreground));
+		}
+	}
+
+	.tox-split-button {
+
+		&:hover {
+			box-shadow: 0 0 0 1px hsl(var(--foreground) / 10%) inset;
+		}
+	}
+
+	.tox-editor-header {
+
+		.tox-toolbar__group {
+
+			&:first-child {
+
+				.tox-tbtn--select {
+					justify-content: space-between;
+					width: 170px;
+					height: 40px;
+					padding: 0 16px;
+					background: none;
+					border: 1px solid hsl(var(--border));
+					border-radius: 0.75rem;
+				}
+			}
+
+			&:nth-child(2) {
+
+				.tox-tbtn {
+					width: auto;
+				}
+
+				.tox-tbtn__select-label {
+					overflow: visible;
+				}
+			}
+
+			&:nth-child(3) {
+
+				.tox-tbtn__select-chevron {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.tox-custom-label {
+		font-size: 10px;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-bottom: 1em;
+	}
+
+	.tox-menu.tox-collection.tox-collection--list {
+		padding: 16px !important;
+
+		.tox-collection__group {
+			padding: 20px 0;
+
+			&:first-child {
+				padding-top: 0;
+			}
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+
+		.tox-collection__item {
+			cursor: pointer;
+		}
+
+		.tox-collection__item-label {
+			font-size: 13px;
+		}
+	}
+
+	.tox-collection--list {
+
+		.tox-collection__item--active,
+		.tox-collection__item--enabled {
+			background-color: hsl(var(--primary) / 10%);
+			color: hsl(var(--primary));
+		}
+
+		.tox-collection__item--active {
+
+			&:not(.tox-collection__item--state-disabled) {
+				color: hsl(var(--foreground));
+			}
+		}
+	}
+
+	.tox-toolbar-overlord {
+		overflow-x: auto;
+	}
+
+	.tox-toolbar-overlord,
+	&:not(.tox-tinymce-inline) .tox-editor-header {
+		background: none;
+	}
+
+	&:not(.tox-tinymce-inline) {
+
+		.tox-editor-header {
+			box-shadow: none;
+		}
+	}
+
+	&.tox-tinymce-aux {
+
+		.tox-toolbar__overflow {
+			background-color: hsl(var(--surface-light));
+		}
+	}
+
+	.tox-toolbar__overflow {
+
+		.tox-tbtn {
+			width: auto;
+			height: auto;
+		}
+	}
+
+	&.tox-edit-focus {
+
+		.tox-edit-area {
+
+			&:before {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.lqd-tinymce-toolbar-fixed {
+	--header-translateX: var(--sidebar-w);
+	padding-bottom: 7rem;
+
+	div.tox {
+		height: calc(100vh - var(--editor-tb-h) - 6rem - 7rem) !important;
+
+		.tox-editor-header {
+			box-shadow: 0 4px 10px rgb(0 0 0 / 5%) !important;
+			background: hsl(var(--background)) !important;
+			transition: transform 0.3s;
+			position: fixed !important;
+			inset-inline-start: 0;
+			top: var(--editor-tb-h);
+			width: 100vw;
+			transform: translateX(var(--header-translateX));
+			transition: all 0.5s cubic-bezier(0.25, 0.8, 0.49, 1.0) !important;
+			padding: 0 !important;
+
+			.lqd-generator-sidebar-collapsed & {
+				transform: translateX(0);
+				z-index: 40;
+			}
+		}
+
+		.tox-tbtn--select {
+			margin: 0;
+		}
+
+		.tox-tbtn__select-label {
+			font-size: 12px;
+			font-weight: 500;
+		}
+
+		.tox-toolbar-overlord,
+		.tox-toolbar__primary {
+			background: none;
+		}
+
+		.tox-toolbar__primary {
+			border-bottom: none !important;
+			padding-bottom: 0;
+			gap: 2rem;
+		}
+
+		.tox-toolbar__group {
+
+			&:first-child,
+			&:last-child {
+				width: var(--sidebar-w);
+			}
+
+			&:first-child {
+				margin-inline-end: auto;
+
+				.tox-tbtn--select {
+					border-radius: 0;
+					border: none;
+					border-inline-end: 1px solid hsl(var(--border));
+				}
+			}
+
+			&:last-child {
+				margin-inline-start: auto;
+				justify-content: end;
+				padding-inline-end: 0.5rem;
+			}
+		}
+	}
+}
+
+.theme-dark {
+
+	div.tox {
+
+		.tox-menu {
+			background-color: hsl(var(--surface-light));
+			border: none;
+		}
+	}
+}
+
+html[dir='rtl'] {
+	.workbook-form {
+		.tox {
+
+			.tox-toolbar__primary,
+			.tox-toolbar {
+				flex-direction: row-reverse !important;
+			}
+		}
+	}
+	.lqd-tinymce-toolbar-fixed {
+		--header-translateX: calc(var(--sidebar-w) * -1);
+	}
+}
+
+@media (max-width: 991px) {
+
+	.lqd-tinymce-toolbar-fixed {
+
+		div.tox {
+
+			.tox-toolbar {
+
+				&.tox-toolbar--scrolling {
+					overflow-x: auto;
+					flex-wrap: nowrap;
+				}
+			}
+
+			.tox-editor-header {
+				transform: translateX(0);
+			}
+
+			.tox-toolbar__group {
+
+				&:first-child,
+				&:last-child {
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 565px) {
+
+	.tox {
+		.tox-toolbar.tox-toolbar--scrolling {
+			overflow: hidden;
+			flex-wrap: wrap;
+			gap: 8px;
+
+			.tox-toolbar__group {
+				gap: 3px;
+			}
+		}
+	}
+}

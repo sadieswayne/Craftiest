@@ -1,0 +1,9 @@
+.avatar {
+	--tblr-border-radius: var(--tblr-avatar-size);
+	--tblr-avatar-shadow: var(--lqd-shadow-xs);
+
+	svg {
+		width: unset;
+		height: unset;
+	}
+}

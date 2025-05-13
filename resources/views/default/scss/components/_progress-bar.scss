@@ -1,0 +1,12 @@
+@keyframes lqd-progress-bar-indeterminate {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(100%) scaleX(0);
+	}
+}
+
+.lqd-progress-bar-indeterminate {
+	animation: lqd-progress-bar-indeterminate 1.75s cubic-bezier(0.31, 0.91, 0.64, 0.98) infinite;
+}

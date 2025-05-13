@@ -1,0 +1,15 @@
+.bg-success {
+	--tblr-bg-opacity: 0.1;
+	--tblr-badge-color: var(--tblr-success);
+}
+.bg-danger {
+	--tblr-bg-opacity: 0.1;
+	--tblr-badge-color: var(--tblr-danger);
+}
+
+.badge {
+	font-size: 0.75rem;
+	text-transform: none;
+	letter-spacing: 0;
+	border-radius: 2em;
+}

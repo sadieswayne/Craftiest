@@ -1,0 +1,3 @@
+INSERT INTO `openai` (`title`, `description`, `slug`, `active`, `questions`, `image`, `premium`, `type`, `created_at`, `updated_at`, `prompt`, `custom_template`, `tone_of_voice`, `color`, `filters`) VALUES
+('AI PDF', 'Elevate your pdf analytics with our AI PDF.', 'ai_pdf', 1, '[{\"name\":\"your_description\",\"type\":\"textarea\",\"question\":\"Description\",\"select\":\"\"}]', '<svg xmlns="http://www.w3.org/2000/svg" 
+ width="48" height="48" stroke-width="2" stroke="black" fill="none" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4l6 16l6 -16" /></svg>', 0, 'text', '2023-09-20 08:26:49', '2023-09-20 08:26:49', NULL, 0, 0, '#A3D6C2', 'blog');

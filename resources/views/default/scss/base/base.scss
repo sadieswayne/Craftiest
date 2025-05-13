@@ -1,0 +1,40 @@
+*::-webkit-scrollbar {
+	width: var(--scrollbar-width);
+}
+
+*::-webkit-scrollbar-track {
+	background: hsl(var(--scrollbar-track));
+}
+
+*::-webkit-scrollbar-thumb {
+	background: hsl(var(--scrollbar-thumb));
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: hsl(var(--scrollbar-thumb-hover));
+}
+
+* {
+	scrollbar-color: hsl(var(--scrollbar-thumb)) hsl(var(--scrollbar-track));
+	scrollbar-width: var(--scrollbar-width);
+}
+
+body {
+	overflow-y: auto;
+}
+
+hr {
+	@apply transition-colors my-2.5 mx-0 opacity-100;
+	border-color: hsl(var(--border));
+}
+
+.container-fluid {
+	@apply mx-auto w-full;
+}
+
+body:has(.lqd-bottom-menu) {
+
+	.lqd-page {
+		@apply max-lg:pb-16;
+	}
+}

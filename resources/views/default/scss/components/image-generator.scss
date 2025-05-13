@@ -1,0 +1,33 @@
+@keyframes lqd-image-generator-slide-in {
+	from {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+}
+
+@keyframes lqd-image-generator-scale-down {
+	to {
+		transform: scale(0.985);
+		opacity: 0;
+	}
+}
+
+::view-transition-old(lqd-image-generator) {
+	animation: lqd-image-generator-scale-down 0.3s cubic-bezier(0.23, 1, 0.320, 1) both;
+}
+::view-transition-new(lqd-image-generator) {
+	animation: lqd-image-generator-slide-in 0.3s cubic-bezier(0.23, 1, 0.320, 1) both;
+}
+
+.lqd-image-generator-tabs-nav {
+	view-transition-name: lqd-image-generator-tabs-nav;
+}
+
+.lqd-image-generator-stablediffusion,
+.lqd-image-generator-dalle {
+	view-transition-name: lqd-image-generator;
+}
+
+.lqd-image-generator-random-prompt {
+	view-transition-name: lqd-image-generator-random-prompt;
+}

@@ -1,0 +1,46 @@
+{
+	"private": true,
+	"scripts": {
+		"lint": "eslint ./resources/views/page",
+		"dev": "vite",
+		"build": "vite build",
+		"clean": "vite clean",
+		"watch": "gulp watch"
+	},
+	"devDependencies": {
+		"@angular-eslint/template-parser": "^17.2.1",
+		"@tailwindcss/forms": "^0.5.7",
+		"@tailwindcss/typography": "^0.5.12",
+		"autoprefixer": "^10.4.14",
+		"axios": "^1.7.4",
+		"del": "^7.0.0",
+		"eslint": "^8.56.0",
+		"eslint-plugin-tailwindcss": "^3.14.0",
+		"gulp": "^5.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-csso": "^4.0.1",
+		"gulp-esbuild": "^0.11.1",
+		"gulp-file": "^0.4.0",
+		"gulp-sass": "^5.1.0",
+		"laravel-echo": "^1.16.1",
+		"laravel-vite-plugin": "^1.2.0",
+		"lodash": "^4.17.21",
+		"postcss": "^8.4.45",
+		"pusher-js": "^8.4.0-rc2",
+		"sass": "^1.62.0",
+		"tailwindcss": "^3.4.15",
+		"tailwindcss-motion": "^1.1.0",
+		"vite": "^6.2.0",
+		"vite-plugin-mkcert": "^1.17.6"
+	},
+	"dependencies": {
+		"@alpinejs/intersect": "^3.14.8",
+		"@alpinejs/sort": "^3.14.8",
+		"@imacrayon/alpine-ajax": "^0.4.3",
+		"@microsoft/fetch-event-source": "^2.0.1",
+		"rt-client": "file:./rt-client-0.4.7.tgz",
+		"typed.js": "^2.1.0",
+		"vite-plugin-mkcert": "^1.17.7"
+	}
+}

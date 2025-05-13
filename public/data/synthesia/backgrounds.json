@@ -1,0 +1,25 @@
+{
+  "transparent": [
+    "green_screen"
+  ],
+  "solid": [
+    "off_white",
+    "warm_white",
+    "light_pink",
+    "soft_pink",
+    "light_blue",
+    "dark_blue",
+    "soft_cyan",
+    "strong_cyan",
+    "light_orange",
+    "soft_orange"
+  ],
+  "image": [
+    "white_studio",
+    "white_cafe",
+    "luxury_lobby",
+    "large_window",
+    "white_meeting_room",
+    "open_office"
+  ]
+}

@@ -1,0 +1,1 @@
+UPDATE `extensions` SET `description` = 'Effortlessly create, customize, and distribute captivating newsletters tailored to your specific marketing needs.', category = 'Bulk Email, Marketing, Customers' WHERE `slug` = 'newsletter';

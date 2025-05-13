@@ -1,0 +1,58 @@
+[17-Feb-2025 04:54:00 UTC] 1
+[17-Feb-2025 05:51:29 UTC] 1.0237142857143
+[18-Feb-2025 04:35:58 UTC] 1
+[20-Feb-2025 06:57:01 UTC] 1
+[04-Mar-2025 10:11:20 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Driver [claude-3-5-sonnet-20240620] not supported. in /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Support/Manager.php:109
+Stack trace:
+#0 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Support/Manager.php(80): Illuminate\Support\Manager->createDriver()
+#1 /home/helpgbxr/public_html/app/Domains/Entity/EntityManager.php(37): Illuminate\Support\Manager->driver()
+#2 /home/helpgbxr/public_html/app/Domains/Entity/EntityManager.php(77): App\Domains\Entity\EntityManager->driver()
+#3 [internal function]: App\Domains\Entity\EntityManager->App\Domains\Entity\{closure}()
+#4 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Collections/Arr.php(600): array_map()
+#5 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Collections/Collection.php(778): Illuminate\Support\Arr::map()
+#6 /home/helpgbxr/public_html/app/Domains/Entity/EntityManager.php(68): Illuminate\Support\Collection->map()
+#7 /home/helpgbxr/public_html/vendor/spatie/once/src/functions.php(39): App\Domains\Entity\EntityManager->App\Domains\Entity\{closure}()
+#8 /home/helpgbxr/public_html/app/Domains/Entity/EntityManager.php(63): once()
+#9 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(355): App\Domains\Entity\EntityManager->all()
+#10 /home/helpgbxr/public_html/app/Models/Concerns/User/HasCredit.php(64): Illuminate\Support\Facades\Facade::__callStatic()
+#11 /home/helpgbxr/public_html/vendor/spatie/once/src/functions.php(39): App\Models\User::App\Models\Concerns\User\{closure}()
+#12 /home/helpgbxr/public_html/app/Models/Concerns/User/HasCredit.php(63): once()
+#13 /home/helpgbxr/public_html/app/Models/Concerns/User/HasCredit.php(15): App\Models\User::getFreshCredits()
+#14 [internal function]: App\Models\User::App\Models\Concerns\User\{closure}()
+#15 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php(676): call_user_func()
+#16 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php(702): Illuminate\Database\Eloquent\Model->mutateAttributeMarkedAttribute()
+#17 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php(261): Illuminate\Database\Eloquent\Model->mutateAttributeForArray()
+#18 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php(199): Illuminate\Database\Eloquent\Model->addMutatedAttributesToArray()
+#19 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1637): Illuminate\Database\Eloquent\Model->attributesToArray()
+#20 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1666): Illuminate\Database\Eloquent\Model->toArray()
+#21 [internal function]: Illuminate\Database\Eloquent\Model->jsonSerialize()
+#22 /home/helpgbxr/public_html/vendor/spatie/flare-client-php/src/Truncation/ReportTrimmer.php(41): json_encode()
+#23 /home/helpgbxr/public_html/vendor/spatie/flare-client-php/src/Truncation/ReportTrimmer.php(24): Spatie\FlareClient\Truncation\ReportTrimmer->needsToBeTrimmed()
+#24 /home/helpgbxr/public_html/vendor/spatie/laravel-ray/src/Watchers/ExceptionWatcher.php(68): Spatie\FlareClient\Truncation\ReportTrimmer->trim()
+#25 /home/helpgbxr/public_html/vendor/spatie/laravel-ray/src/Watchers/ExceptionWatcher.php(37): Spatie\LaravelRay\Watchers\ExceptionWatcher->getFlareReport()
+#26 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(458): Spatie\LaravelRay\Watchers\ExceptionWatcher->Spatie\LaravelRay\Watchers\{closure}()
+#27 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(286): Illuminate\Events\Dispatcher->Illuminate\Events\{closure}()
+#28 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Events/Dispatcher.php(266): Illuminate\Events\Dispatcher->invokeListeners()
+#29 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Log/Logger.php(248): Illuminate\Events\Dispatcher->dispatch()
+#30 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Log/Logger.php(189): Illuminate\Log\Logger->fireLogEvent()
+#31 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Log/Logger.php(97): Illuminate\Log\Logger->writeLog()
+#32 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(681): Illuminate\Log\Logger->error()
+#33 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(317): Illuminate\Log\LogManager->error()
+#34 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(278): Illuminate\Foundation\Exceptions\Handler->reportThrowable()
+#35 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(730): Illuminate\Foundation\Exceptions\Handler->report()
+#36 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(650): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#37 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(556): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#38 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(473): Illuminate\Foundation\Exceptions\Handler->renderExceptionResponse()
+#39 /home/helpgbxr/public_html/app/Exceptions/Handler.php(60): Illuminate\Foundation\Exceptions\Handler->render()
+#40 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(218): App\Exceptions\Handler->render()
+#41 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(195): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#42 /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(255): Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#43 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->Illuminate\Foundation\Bootstrap\{closure}()
+#44 {main}
+  thrown in /home/helpgbxr/public_html/vendor/laravel/framework/src/Illuminate/Support/Manager.php on line 109
+[24-Apr-2025 18:25:19 UTC] 1.0014285714286
+[24-Apr-2025 18:25:19 UTC] The OpenAI account associated with this API key has been deactivated. If you are the developer for this OpenAI app, please check your email for more information. If you are seeing this error while using another app or site, please reach out to them for more help.
+[24-Apr-2025 18:25:19 UTC] The OpenAI account associated with this API key has been deactivated. If you are the developer for this OpenAI app, please check your email for more information. If you are seeing this error while using another app or site, please reach out to them for more help.
+[24-Apr-2025 18:25:24 UTC] 1.0014285714286
+[24-Apr-2025 18:25:27 UTC] The OpenAI account associated with this API key has been deactivated. If you are the developer for this OpenAI app, please check your email for more information. If you are seeing this error while using another app or site, please reach out to them for more help.
+[24-Apr-2025 18:25:27 UTC] The OpenAI account associated with this API key has been deactivated. If you are the developer for this OpenAI app, please check your email for more information. If you are seeing this error while using another app or site, please reach out to them for more help.

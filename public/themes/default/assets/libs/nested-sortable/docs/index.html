@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>nestedSortable jQuery Plugin</title>
+	<meta content="Demo page of the nestedSortable jQuery Plugin" name="description">
+	<meta content="Manuele J Sarfatti" name="author">
+
+	<style type="text/css">
+		html {
+			background-color: #eee;
+		}
+
+		body {
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			color: #444;
+			background-color: #fff;
+			font-size: 13px;
+			font-family: Freesans, sans-serif;
+			padding: 2em 4em;
+			width: 860px;
+			margin: 15px auto;
+			box-shadow: 1px 1px 8px #444;
+			-mox-box-shadow: 1px 1px 8px #444;
+			-webkit-box-shadow: 1px -1px 8px #444;
+		}
+
+		a,
+		a:visited {
+			color: #4183C4;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		pre,
+		code {
+			font-size: 12px;
+		}
+
+		pre {
+			width: 100%;
+			overflow: auto;
+		}
+
+		small {
+			font-size: 90%;
+		}
+
+		small code {
+			font-size: 11px;
+		}
+
+		.placeholder {
+			outline: 1px dashed #4183C4;
+		}
+
+		.mjs-nestedSortable-error {
+			background: #fbe3e4;
+			border-color: transparent;
+		}
+
+		#tree {
+			width: 550px;
+			margin: 0;
+		}
+
+		ol {
+			max-width: 450px;
+			padding-left: 25px;
+		}
+
+		ol.sortable,
+		ol.sortable ol {
+			list-style-type: none;
+		}
+
+		.sortable li div {
+			border: 1px solid #d4d4d4;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			cursor: move;
+			border-color: #D4D4D4 #D4D4D4 #BCBCBC;
+			margin: 0;
+			padding: 3px;
+		}
+
+		li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
+			border-color: #999;
+		}
+
+		.disclose,
+		.expandEditor {
+			cursor: pointer;
+			width: 20px;
+			display: none;
+		}
+
+		.sortable li.mjs-nestedSortable-collapsed>ol {
+			display: none;
+		}
+
+		.sortable li.mjs-nestedSortable-branch>div>.disclose {
+			display: inline-block;
+		}
+
+		.sortable span.ui-icon {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+		}
+
+		.menuDiv {
+			background: #EBEBEB;
+		}
+
+		.menuEdit {
+			background: #FFF;
+		}
+
+		.itemTitle {
+			vertical-align: middle;
+			cursor: pointer;
+		}
+
+		.deleteMenu {
+			float: right;
+			cursor: pointer;
+		}
+
+		h1 {
+			font-size: 2em;
+			margin-bottom: 0;
+		}
+
+		h2 {
+			font-size: 1.2em;
+			font-weight: 400;
+			font-style: italic;
+			margin-top: .2em;
+			margin-bottom: 1.5em;
+		}
+
+		h3 {
+			font-size: 1em;
+			margin: 1em 0 .3em;
+		}
+
+		p,
+		ol,
+		ul,
+		pre,
+		form {
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+
+		dl {
+			margin: 0;
+		}
+
+		dd {
+			margin: 0;
+			padding: 0 0 0 1.5em;
+		}
+
+		code {
+			background: #e5e5e5;
+		}
+
+		input {
+			vertical-align: text-bottom;
+		}
+
+		.notice {
+			color: #c33;
+		}
+	</style>
+
+ 
+
+
+<style>
+	#menu-title,
+	#menu-url,
+	#menu-class {
+		width: 90%;
+	}
+
+	#edit-menu-title,
+	#edit-menu-url,
+	#edit-menu-class {
+		width: 70%;
+	}
+
+	#menu-group-title {
+		width: 70%;
+	}
+
+	/*Edit Form*/
+	#edit-form {
+		display: none;
+		border: 1px solid #ccc;
+		background: #fcfcfc;
+		border-top: none;
+		padding: 10px 0;
+	}
+
+	#menu-group-add {
+		display: none;
+	}
+
+	/* nested sortable
+------------------------------------------------------------------------- */
+	.ns-helper {
+		border: 1px dashed #e3e3e3;
+		background: #e6e6e6;
+		border-radius: 5px;
+	}
+
+	.sortable {
+		margin: 5px 0;
+		clear: both;
+		list-style: none;
+	}
+
+	.sortable img {
+		vertical-align: bottom;
+	}
+
+	.sortable.mjs-nestedSortable-collapsed > ul { 
+		display: none;
+	}
+
+
+	#ns-header {
+		padding: 8px 10px;
+		/* font-weight: bold; */
+		/* font-size: 14px; */
+		/* color: #fff; */
+		/* background: #616161 !important; */
+		/* border-radius: unset !important; */
+	}
+
+	#ns-header div {
+		border: none;
+	}
+
+	#ns-footer {
+		text-align: right;
+		margin-top: 10px;
+	}
+
+	.ns-row {
+		line-height: 18px;
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #cfcfcf;
+		/* background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f9f9f9), to(#f5f5f5)); */
+		/* background: -moz-linear-gradient(#f9f9f9, #f5f5f5); */
+		/* background: linear-gradient(#f9f9f9, #f5f5f5); */
+
+		position: relative;
+	}
+
+	.ns-row div {
+		border-left: 1px solid #d5d5d5;
+		height: 18px;
+		overflow: hidden;
+		position: absolute;
+		top: 6px;
+		padding-left: 10px;
+	}
+
+	div.ns-title {
+		position: static;
+		border: none;
+		font-weight: 400;
+		padding-left: 0;
+		cursor: move;
+	}
+
+	.actions {
+		width: 70px;
+		right: 12px;
+		height: 20px !important;
+
+	}
+
+	.ns-class {
+		width: 100px;
+		right: 60px;
+	}
+
+	.ns-url {
+		width: 150px;
+		right: 300px;
+	}
+
+	.actions a {
+		margin-left: 10px;
+	}
+
+	/* error
+------------------------------------------------------------------------- */
+	span.error {
+		color: red;
+	}
+
+	/* modal box
+------------------------------------------------------------------------- */
+	#gbox {
+		position: absolute;
+		position: fixed;
+		display: none;
+		z-index: 10002;
+		width: 370px;
+		border: 1px solid #acacac;
+		border-radius: 5px;
+		color: #222;
+		background: #fff;
+		-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	#gbox_header {
+		padding: 5px 10px;
+		color: #000;
+		font-size: 14px;
+		font-weight: bold;
+		text-shadow: 1px 1px 0 #fff;
+	}
+
+	#gbox h2 {
+		font: 15px Arial, sans-serif;
+		font-weight: bold;
+		color: #333;
+		border-bottom: 1px dashed #eaeaea;
+		margin: 0 0 10px;
+		padding: 0 0 8px;
+	}
+
+	#gbox_content {
+		padding: 15px 12px;
+		overflow: auto;
+		max-height: 400px;
+	}
+
+	#gbox_footer {
+		padding: 10px 15px;
+		border-top: 1px solid #eee;
+		background: #f9f9f9;
+		text-align: right;
+		border-radius: 5px;
+	}
+
+	#gbox_form input[type="text"] {
+		width: 95%;
+	}
+
+	#gbox_bg {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: none;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		opacity: 0.6;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+		filter: alpha(opacity=60);
+		z-index: 10001;
+		cursor: pointer;
+	}
+
+	#gbox_loading {
+		font-size: 18px;
+		color: #aaa;
+		text-align: center;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+
+	#gbox input[type="text"] {
+		width: 100%;
+		border-radius: 5px;
+	}
+
+
+	/* new library update
+-------------------------- */
+	#easymm ul {
+		margin-left: 15px;
+		list-style: none !important;
+	}
+
+	.ns-helper {
+		margin: 5px 0;
+	}
+
+	.ns-row div {
+		top: 7px;
+	}
+
+
+	.top-header-text {
+		margin-top: 15px;
+		color: #ffffff;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: bold;
+
+	}
+
+	/*Current menu*/
+	.edit-group-buttons {
+		margin-top: 5px;
+	}
+</style>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="jquery.mjs.nestedSortable.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+	<div>
+
+		<header>
+			<h1>nestedSortable jQuery Plugin</h1>
+			
+			<h2>2.0</h2>
+		</header>
+	</div>
+
+<br>
+<br>
+
+    <section>
+        <p>This is the demo page for the nestedSortable jQuery plugin.</p>
+
+        <p><strong>This is for my own example, please follow the original repository <a href="https://github.com/ilikenwf/nestedSortable">GitHub
+        page</a>.</strong></p>
+    </section><!-- END section -->
+
+
+	<form method="post" id="form-menu" action="#">
+		<div class="ns-row" id="ns-header" style="background-color: #bbb;">
+			<div class="actions">Actions</div>
+			<div class="ns-url">URL</div>
+			<div class="ns-url"></div>
+			<div class="ns-title">Title</div>
+		</div>
+
+		<div style="min-height:250px;max-height:250px;overflow:auto">
+
+			<ul id="easymm" class="p-0 ui-sortable">
+				<li id="menu-18" class="sortable mjs-nestedSortable-leaf bg-light">
+					<div class="ns-row bg-body">
+						<div class="ns-title"><i class="far fa-calendar-days"></i> New Menu </div>
+						<div class="ns-url">new_menu</div>
+						<div class="actions"><a href="#"
+								class="btn btn-icon btn-active-light-primary w-10px h-10px m-2 me-5 edit-menu"
+								title="Edit"><i class="bi bi-pencil fs-4"></i></a><a href="#"
+								class="btn btn-icon btn-active-light-danger w-10px h-10px m-2 delete-menu"
+								title="Delete"><i class="bi bi-trash fs-4"></i></a><input type="hidden" name="menu_id"
+								value="18"></div>
+					</div>
+				</li>
+				<li id="menu-19" class="sortable mjs-nestedSortable-leaf bg-light">
+					<div class="ns-row bg-body">
+						<div class="ns-title"><i class="far fa-chess-rook"></i> Dashboard </div>
+						<div class="ns-url">dashboard</div>
+						<div class="actions"><a href="#"
+								class="btn btn-icon btn-active-light-primary w-10px h-10px m-2 me-5 edit-menu"
+								title="Edit"><i class="bi bi-pencil fs-4"></i></a><a href="#"
+								class="btn btn-icon btn-active-light-danger w-10px h-10px m-2 delete-menu"
+								title="Delete"><i class="bi bi-trash fs-4"></i></a><input type="hidden" name="menu_id"
+								value="19"></div>
+					</div>
+				</li>
+				 
+				<li id="menu-1" class="sortable mjs-nestedSortable-leaf bg-light">
+					<div class="ns-row bg-body">
+						<div class="ns-title"><i class="fas fa-person"></i> Manajemen User </div>
+						<div class="ns-url">manajemen_user</div>
+						<div class="actions"><a href="#"
+								class="btn btn-icon btn-active-light-primary w-10px h-10px m-2 me-5 edit-menu"
+								title="Edit"><i class="bi bi-pencil fs-4"></i></a><a href="#"
+								class="btn btn-icon btn-active-light-danger w-10px h-10px m-2 delete-menu"
+								title="Delete"><i class="bi bi-trash fs-4"></i></a><input type="hidden" name="menu_id"
+								value="1"></div>
+					</div>
+				</li>
+				<li id="menu-2" class="sortable mjs-nestedSortable-branch mjs-nestedSortable-collapsed">
+					<div class="ns-row bg-body">
+						<div class="ns-title"><i class="fas fa-list"></i> Manajemen Menu <span
+								class="disclose ms-3 fas fa-angle-down fs-7"
+								title="Click to show/hide children"><span></span></span></div>
+						<div class="ns-url">#</div>
+						<div class="actions"><a href="#"
+								class="btn btn-icon btn-active-light-primary w-10px h-10px m-2 me-5 edit-menu"
+								title="Edit"><i class="bi bi-pencil fs-4"></i></a><a href="#"
+								class="btn btn-icon btn-active-light-danger w-10px h-10px m-2 delete-menu"
+								title="Delete"><i class="bi bi-trash fs-4"></i></a><input type="hidden" name="menu_id"
+								value="2"></div>
+					</div>
+					<ul>
+						<li id="menu-3" class="sortable mjs-nestedSortable-leaf bg-light">
+							<div class="ns-row bg-body">
+								<div class="ns-title"><i class="fas fa-list"></i> Master Menu </div>
+								<div class="ns-url">master_menu</div>
+								<div class="actions"><a href="#"
+										class="btn btn-icon btn-active-light-primary w-10px h-10px m-2 me-5 edit-menu"
+										title="Edit"><i class="bi bi-pencil fs-4"></i></a><a href="#"
+										class="btn btn-icon btn-active-light-danger w-10px h-10px m-2 delete-menu"
+										title="Delete"><i class="bi bi-trash fs-4"></i></a><input type="hidden"
+										name="menu_id" value="3"></div>
+							</div>
+						</li>
+						<li id="menu-4" class="sortable mjs-nestedSortable-leaf bg-light">
+							<div class="ns-row bg-body">
+								<div class="ns-title"><i class="fas fa-list"></i> Role Menu </div>
+								<div class="ns-url">role_menu</div>
+								<div class="actions"><a href="#"
+										class="btn btn-icon btn-active-light-primary w-10px h-10px m-2 me-5 edit-menu"
+										title="Edit"><i class="bi bi-pencil fs-4"></i></a><a href="#"
+										class="btn btn-icon btn-active-light-danger w-10px h-10px m-2 delete-menu"
+										title="Delete"><i class="bi bi-trash fs-4"></i></a><input type="hidden"
+										name="menu_id" value="4"></div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li id="menu-16" class="sortable mjs-nestedSortable-leaf bg-light">
+					<div class="ns-row bg-body">
+						<div class="ns-title"><i class="la la-cog"></i> Settings </div>
+						<div class="ns-url">setting</div>
+						<div class="actions"><a href="#"
+								class="btn btn-icon btn-active-light-primary w-10px h-10px m-2 me-5 edit-menu"
+								title="Edit"><i class="bi bi-pencil fs-4"></i></a><a href="#"
+								class="btn btn-icon btn-active-light-danger w-10px h-10px m-2 delete-menu"
+								title="Delete"><i class="bi bi-trash fs-4"></i></a><input type="hidden" name="menu_id"
+								value="16"></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</form>
+
+	<section id="license">
+		<h4>License</h4>
+
+		<p>This work is licensed under the MIT License.<br>
+			Which means you can do pretty much whatever you want with it.</p>
+
+		<p>&copy; 2010&dash;2014 Manuele J Sarfatti</p>
+	</section>
+
+	<script>
+		var menu_serialized;
+		$("#easymm").nestedSortable({
+			listType: "ul",
+			handle: "div",
+			items: "li",
+			placeholder: "ns-helper",
+			opacity: 0.8,
+			handle: ".ns-title",
+			toleranceElement: "> div",
+			forcePlaceholderSize: true,
+			tabSize: 15,
+			startCollapsed: true,
+			update: function () {
+				menu_serialized = $("#easymm").nestedSortable("serialize");
+				$("#btn-save-menu").attr("disabled", false);
+			},
+		});
+		$('.disclose').attr('title', 'Click to show/hide children');
+		$('.disclose').on('click', function () {
+			$(this).closest('li').toggleClass('mjs-nestedSortable-collapsed').toggleClass('mjs-nestedSortable-expanded');
+			$(this).toggleClass('fas fa-angle-down').toggleClass('fas fa-angle-up');
+		});
+	</script>
+</body>
+
+</html>

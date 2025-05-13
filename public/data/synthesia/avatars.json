@@ -1,0 +1,520 @@
+[
+  {
+    "name": "Ada",
+    "gender": "Female",
+    "version": "Expressive",
+    "avatar_id": "03cee7ec-ac90-45ec-8c20-74a399cf3dc4",
+    "image": "ada.png"
+  },
+  {
+    "name": "Aaron",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "99b841f2-8acf-4c7f-8add-9ea7ac98689d",
+    "image": "aaron.png"
+  },
+  {
+    "name": "Alex",
+    "gender": "Female",
+    "version": "Expressive",
+    "avatar_id": "anna_costume1_cameraA",
+    "image": "alex.png"
+  },
+  {
+    "name": "Arielle",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "1087cd3e-2095-4aaa-bded-da92a5f173ef",
+    "image": "arielle.png"
+  },
+  {
+    "name": "Ace",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "f41b7f1f-ff0d-4c8e-9d1f-f87dbb862750",
+    "image": "ace.png"
+  },
+  {
+    "name": "Callum",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "d4c56560-a92c-4631-aa7e-63df448b222a",
+    "image": "callum.png"
+  },
+  {
+    "name": "Carla",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "cb07d776-f671-4bb1-b601-b4fbdbd0decd",
+    "image": "carla.png"
+  },
+  {
+    "name": "Carlo",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "2267b24a-7a51-44d3-9105-8ff902298549",
+    "image": "carlo.png"
+  },
+  {
+    "name": "Chauncy",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "d8c88eb6-e7ec-43c1-abd3-1d9293313ed1",
+    "image": "chauncy.png"
+  },
+  {
+    "name": "Chef Collie",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "fa277266-4a98-4fb7-9001-019f9636a2bf",
+    "image": "chef_collie.png"
+  },
+  {
+    "name": "Daren",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "1add09f4-40d3-40db-b75b-82550747fe8c",
+    "image": "daren.png"
+  },
+  {
+    "name": "Ella",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "e5d15599-eeb4-488d-8be7-0fba94a52595",
+    "image": "ella.png"
+  },
+  {
+    "name": "Emma",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "2d170992-b042-41d8-bebd-1763cebfbb07",
+    "image": "emma.png"
+  },
+  {
+    "name": "Faiza",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "696b98e6-587a-4e56-bd6e-0f5af9f17164",
+    "image": "faiza.png"
+  },
+  {
+    "name": "Fazwa",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "22ca23a0-44da-4e92-825e-6d7afb717d4d",
+    "image": "fazwa.png"
+  },
+  {
+    "name": "Felix",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "13530b49-6a14-4c22-aa0a-402f2457d142",
+    "image": "felix.png"
+  },
+  {
+    "name": "Francesca",
+    "gender": "Female",
+    "version": "Expressive",
+    "avatar_id": "4e904b0a-f86d-47be-b654-adc6a6db6511",
+    "image": "francesca.png"
+  },
+  {
+    "name": "Freya",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "93e3dc72-a4ee-4bf9-91a8-ec315ef77d7e",
+    "image": "freya.png"
+  },
+  {
+    "name": "Gary",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "e90a5e65-84fa-4cd5-b193-aecccc9ea0ca",
+    "image": "gary.png"
+  },
+  {
+    "name": "Helia",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "e9213f66-948e-45f7-89c5-f3adf1e65904",
+    "image": "helia.png"
+  },
+  {
+    "name": "Ines",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "a735999c-bd61-4840-8afe-5676aa61c886",
+    "image": "ines.png"
+  },
+  {
+    "name": "Isabella",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "isabella_costume1_cameraA",
+    "image": "isabella.png"
+  },
+  {
+    "name": "Jack",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "94a2b8a4-f1dc-4d14-808d-24a0cf4ac03c",
+    "image": "jack.png"
+  },
+  {
+    "name": "Jackie",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "099a3571-ad3a-4301-b18b-0280416518f1",
+    "image": "jackie.png"
+  },
+  {
+    "name": "James",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "james_costume1_cameraA",
+    "image": "james.png"
+  },
+  {
+    "name": "Jaz",
+    "gender": "Male",
+    "version": "Expressive",
+    "avatar_id": "a963cf0f-023c-408c-a1df-48c7d6183100",
+    "image": "jaz.png"
+  },
+  {
+    "name": "Jenna",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "caa22546-7e27-4ebb-ab1e-80981e44701e",
+    "image": "jenna.png"
+  },
+  {
+    "name": "Jimmy",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "ad669df2-ce3b-4cc4-af61-8a8d09e400a5",
+    "image": "jimmy.png"
+  },
+  {
+    "name": "Jordan",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "f94037d1-0209-4a46-b2a6-f6579849397d",
+    "image": "jordan.png"
+  },
+  {
+    "name": "Joshua",
+    "gender": "Male",
+    "version": "Expressive",
+    "avatar_id": "0d2356ca-b688-419a-b08b-9264e5a6a94e",
+    "image": "joshua.png"
+  },
+  {
+    "name": "Julia",
+    "gender": "Female",
+    "version": "Expressive",
+    "avatar_id": "9fd70b49-1ab4-494e-9872-90d831ad31b7",
+    "image": "julia.png"
+  },
+  {
+    "name": "Julie",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "ce73d1d1-6422-46d7-8141-f9a156835f14",
+    "image": "julie.png"
+  },
+  {
+    "name": "Juliette",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "e0ae99d4-54ad-4bb9-892b-a907cf50eafe",
+    "image": "juliette.png"
+  },
+  {
+    "name": "Kade",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "5e7b9416-b8a8-4c79-a64f-4ac02d72fe09",
+    "image": "kade.png"
+  },
+  {
+    "name": "Kayla",
+    "gender": "Female",
+    "version": "Expressive",
+    "avatar_id": "277766da-bb79-4a75-9193-ed45a03b372e",
+    "image": "kayla.png"
+  },
+  {
+    "name": "Kenzo",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "c9fa6a2f-a2d6-4526-8d92-a4647e65a6a6",
+    "image": "kenzo.png"
+  },
+  {
+    "name": "Kevin",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "fe0b0421-8046-491b-ab60-b3e1e2c264ab",
+    "image": "kevin.png"
+  },
+  {
+    "name": "Kiara",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "f61c0edd-89d1-4a85-a146-af10864f3b3f",
+    "image": "kiara.png"
+  },
+  {
+    "name": "Kira",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "61efd173-95f6-45cf-bfa4-9ac7a58a47b9",
+    "image": "kira.png"
+  },
+  {
+    "name": "Lauren",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "73482c65-e461-476f-8651-47433eaf4327",
+    "image": "lauren.png"
+  },
+  {
+    "name": "Liam",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "4fcc5091-18b4-4dc2-a1ae-f028170fdf0d",
+    "image": "liam.png"
+  },
+  {
+    "name": "Lisa",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "34af91b2-95af-4994-852e-5472afc640a2",
+    "image": "lisa.png"
+  },
+  {
+    "name": "Lois",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "58f584ed-a453-4c12-a484-2b174c4bbe1b",
+    "image": "lois.png"
+  },
+  {
+    "name": "Lola",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "a2a42b3c-dfab-45f3-9e2a-3a8112c0ef63",
+    "image": "lola.png"
+  },
+  {
+    "name": "Luna",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "a73b4614-d021-48aa-a86c-ecfc3934390a",
+    "image": "luna.png"
+  },
+  {
+    "name": "Marcus",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "marcus_costume1_cameraA",
+    "image": "marcus.png"
+  },
+  {
+    "name": "Mario",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "18784ae4-0a1e-43a5-9f78-a1a8bbfeb360",
+    "image": "mario.png"
+  },
+  {
+    "name": "Matt",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "d4929d65-1644-4a57-85dc-bee35e9ef29e",
+    "image": "matt.png"
+  },
+  {
+    "name": "Monica",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "772d31e3-be24-4089-8a76-c50623014556",
+    "image": "monica.png"
+  },
+  {
+    "name": "Ms Claus",
+    "gender": "Female",
+    "version": "1",
+    "avatar_id": "422f540c-09db-404e-b4c3-14add80fddfb",
+    "image": "ms_claus.png"
+  },
+  {
+    "name": "Nancy",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "f9ce6812-ac77-4a58-a285-995216257386",
+    "image": "nancy.png"
+  },
+  {
+    "name": "Natalie",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "92bfa0c7-bd1f-45c8-9811-3fd7ba6e5f2e",
+    "image": "natalie.png"
+  },
+  {
+    "name": "Nicole",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "adac13c2-cd91-4422-9e28-642f972c72f0",
+    "image": "nicole.png"
+  },
+  {
+    "name": "Noah",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "822e19d7-fdad-4ad9-a84e-c910f8ba9939",
+    "image": "noah.png"
+  },
+  {
+    "name": "Olivia",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "ffd62308-2e22-4402-ab23-92eb62c73d0b",
+    "image": "olivia.png"
+  },
+  {
+    "name": "Paloma",
+    "gender": "Female",
+    "version": "Expressive",
+    "avatar_id": "65cdfcde-095f-416f-af6c-01cf377b542a",
+    "image": "paloma.png"
+  },
+  {
+    "name": "Paul",
+    "gender": "Male",
+    "version": "1",
+    "avatar_id": "ea86aeb9-13d3-4ae8-8d09-f0f5f4a4ac11",
+    "image": "paul.png"
+  },
+  {
+    "name": "Pierre",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "d85116be-e277-46ab-8e0e-eef4f9976f9d",
+    "image": "pierre.png"
+  },
+  {
+    "name": "Ponn",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "546f9c34-511b-487e-b295-891303627288",
+    "image": "ponn.png"
+  },
+  {
+    "name": "Rosie",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "b5b98fa1-bb55-41f6-a474-7cfadba0dcdc",
+    "image": "rosie.png"
+  },
+  {
+    "name": "Sal",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "f398869d-1375-4f35-858a-6d26c46b5e40",
+    "image": "sal.png"
+  },
+  {
+    "name": "Samuel",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "b3a593e8-fef1-4786-ba26-46341cec828a",
+    "image": "samuel.png"
+  },
+  {
+    "name": "Sana",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "4095cd7c-40ab-4134-9c76-80f07c845b31",
+    "image": "sana.png"
+  },
+  {
+    "name": "Santa",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "santa_costume1_cameraA",
+    "image": "santa.png"
+  },
+  {
+    "name": "Sia",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "937df128-06f4-40c9-b97a-204656a03fd0",
+    "image": "sia.png"
+  },
+  {
+    "name": "Sydonie",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "d8441fa0-0514-4cab-90c7-626ab205e025",
+    "image": "sydonie.png"
+  },
+  {
+    "name": "Talia",
+    "gender": "Female",
+    "version": "Expressive",
+    "avatar_id": "b3d74452-7011-4e8e-b3bf-12f7406f8f22",
+    "image": "talia.png"
+  },
+  {
+    "name": "Theresa",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "7dcff88c-786e-4d9a-83f6-75046ffc4b2d",
+    "image": "theresa.png"
+  },
+  {
+    "name": "Thomas",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "c328313e-1d7f-49d6-9558-3dd14f969ebc",
+    "image": "thomas.png"
+  },
+  {
+    "name": "Tilly",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "e6ec1498-bc95-4bdf-b187-53d8c2af401b",
+    "image": "tilly.png"
+  },
+  {
+    "name": "Timothy",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "36af884a-5333-4681-8bb5-55fb7ea3a89c",
+    "image": "timothy.png"
+  },
+  {
+    "name": "Tony",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "cf46c1b6-e0ca-4be4-af97-b89aaa73a028",
+    "image": "tony.png"
+  },
+  {
+    "name": "Veronika",
+    "gender": "Female",
+    "version": "3",
+    "avatar_id": "veronika_costume1_cameraA",
+    "image": "veronika.png"
+  },
+  {
+    "name": "Will",
+    "gender": "Male",
+    "version": "3",
+    "avatar_id": "e2537805-4bd9-4062-aa97-670e7fe5ca6e",
+    "image": "will.png"
+  }
+]

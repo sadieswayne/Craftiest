@@ -1,0 +1,119 @@
+.apexcharts-xaxistooltip,
+.apexcharts-yaxistooltip,
+.apexcharts-tooltip {
+	backdrop-filter: blur(10px) brightness(120%);
+	box-shadow: 0 2px 4px -1px hsl(0 0% 0% / 5%) !important;
+}
+
+.apexcharts-xaxistooltip,
+.apexcharts-yaxistooltip {
+	border-color: hsl(var(--border)) !important;
+	background: hsl(var(--background)) !important;
+	color: hsl(var(--foreground)) !important;
+}
+
+.apexcharts-tooltip-title {
+	padding: theme('size.2') theme('size.2');
+	margin-bottom: 0 !important;
+	font-family: inherit !important;
+	line-height: inherit;
+	font-weight: 500;
+	background: hsl(var(--foreground) / 10%) !important;
+	border-bottom-color: hsl(var(--border)) !important;
+}
+
+.apexcharts-tooltip-series-group {
+	padding-top: theme('size.2') !important;
+	padding-bottom: theme('size.2') !important;
+}
+
+.apexcharts-tooltip-y-group {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.apexcharts-yaxistooltip-left:before,
+.apexcharts-yaxistooltip-left:after,
+.apexcharts-yaxistooltip-right:before,
+.apexcharts-yaxistooltip-right:after {
+	border-left-color: hsl(var(--border)) !important;
+}
+
+.apexcharts-xaxistooltip-top:before,
+.apexcharts-xaxistooltip-top:after,
+.apexcharts-xaxistooltip-bottom:before,
+.apexcharts-xaxistooltip-bottom:after {
+	border-bottom-color: hsl(var(--border)) !important;
+}
+
+// in popular plans chart we're hiding first 4 legends & points that added as placeholders
+#popular-plans-chart {
+
+	.apexcharts-legend-series[rel='1'],
+	.apexcharts-legend-series[rel='2'],
+	.apexcharts-legend-series[rel='3'],
+	.apexcharts-legend-series[rel='4'],
+	.apexcharts-series + .apexcharts-datalabels,
+	.apexcharts-series + .apexcharts-datalabels + .apexcharts-datalabels,
+	.apexcharts-series + .apexcharts-datalabels + .apexcharts-datalabels + .apexcharts-datalabels,
+	.apexcharts-series + .apexcharts-datalabels + .apexcharts-datalabels + .apexcharts-datalabels + .apexcharts-datalabels {
+		display: none !important;
+	}
+	.apexcharts-series[rel='1'],
+	.apexcharts-series[rel='2'],
+	.apexcharts-series[rel='3'],
+	.apexcharts-series[rel='4'] {
+		visibility: hidden;
+	}
+}
+
+#popular-tools-chart {
+
+	svg,
+	foreignObject {
+		overflow: visible;
+	}
+	.apexcharts-legend {
+		padding: 0;
+		overflow: visible;
+	}
+	.apexcharts-legend-series {
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid hsl(var(--border));
+		padding: 0.75rem 0 !important;
+
+		.apexcharts-legend-text {
+			display: flex;
+			flex-grow: 1;
+			gap: theme('size.2');
+
+			span {
+				font-weight: 700;
+				margin-inline-start: auto;
+			}
+		}
+	}
+}
+
+.theme-dark {
+
+	.apexcharts-tooltip {
+
+		&.apexcharts-theme-light {
+			border-color: hsl(var(--border));
+			background: hsl(var(--background));
+			color: hsl(var(--foreground));
+		}
+	}
+}
+
+@media (min-width: 501px) {
+
+	#popular-tools-chart {
+
+		.apexcharts-legend {
+			top: 0 !important;
+		}
+	}
+}

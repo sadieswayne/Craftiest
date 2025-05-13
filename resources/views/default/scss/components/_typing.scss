@@ -1,0 +1,56 @@
+.tox-edit-area {
+
+	.lqd-typing {
+		position: absolute !important;
+		z-index: 90;
+		top: 1em !important;
+		left: 1em !important;
+		bottom: auto !important;
+		right: auto !important;
+		background: hsl(var(--secondary)) !important;
+		color: hsl(var(--secondary-foreground)) !important;
+		font-size: 12px !important;
+
+		&.lqd-is-hidden {
+			display: none !important;
+		}
+	}
+}
+
+.lqd-chat-ai-bubble {
+
+	.lqd-typing {
+		min-height: inherit;
+	}
+
+	&:not(.loading) {
+
+		.lqd-typing {
+			display: none !important;
+		}
+	}
+}
+
+.lqd-typing-dot {
+	animation: typingAnimation 0.5s infinite alternate backwards cubic-bezier(.9, 0, .95, .84);
+}
+
+.lqd-tinymce-toolbar-fixed {
+
+	.tox-edit-area {
+
+		.lqd-typing {
+			z-index: 20;
+		}
+	}
+}
+
+@keyframes typingAnimation {
+	0% {
+		transform: translateY(0) scaleY(1);
+	}
+
+	100% {
+		transform: translateY(-120%) scaleY(0.75);
+	}
+}

@@ -1,0 +1,213 @@
+:root {
+	--fc-border-color: hsl(var(--border));
+	--fc-button-bg-color: hsl(var(--primary));
+	--fc-button-text-color: hsl(var(--primary-foreground));
+	--fc-button-border-color: hsl(var(--primary));
+	--fc-button-hover-bg-color: hsl(var(--primary) / 80%);
+	--fc-button-hover-text-color: hsl(var(--primary-foreground));
+	--fc-today-bg-color: transparent;
+}
+
+.fc {
+
+	.fc-view-harness {
+		@apply max-sm:min-h-[75vh];
+	}
+
+	.fc-header-toolbar {
+		@apply gap-y-4 max-md:flex-wrap;
+
+		.fc-toolbar-chunk {
+			@apply basis-1/3 flex items-center max-md:w-full max-md:basis-full;
+
+			&:nth-child(1) {
+
+				.fc-button-group {
+					@apply gap-4;
+				}
+
+				.fc-button {
+					@apply px-2 py-0.5 text-2xs font-medium border-none;
+
+					&.fc-button-active {
+						@apply bg-heading-foreground/5 text-heading-foreground;
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				@apply md:justify-center max-md:-order-1;
+			}
+
+			&:nth-child(3) {
+				@apply justify-between md:justify-end;
+			}
+		}
+
+		.fc-button-group {
+			@apply gap-1.5;
+		}
+
+		.fc-button {
+			@apply border border-border py-2 px-4 bg-transparent text-heading-foreground text-xs font-medium transition-all capitalize hover:bg-primary hover:text-primary-foreground hover:border-primary disabled:hover:bg-transparent disabled:hover:text-heading-foreground disabled:hover:border-border;
+			border-radius: 100px !important;
+		}
+
+		.fc-prev-button,
+		.fc-next-button {
+			@apply inline-grid size-[38px] place-items-center p-0;
+
+			.fc-icon {
+				@apply inline-flex text-base/none;
+			}
+		}
+
+		.fc-today-button {
+			@apply shadow-xs disabled:shadow-none;
+		}
+	}
+
+	.fc-toolbar-title {
+		@apply text-lg font-semibold;
+	}
+
+	.fc-list {
+		@apply border-border rounded-xl;
+	}
+
+	.fc-list-sticky {
+
+		.fc-list-day {
+
+			>* {
+				@apply bg-background rounded-t-xl text-heading-foreground/50;
+			}
+		}
+	}
+
+	.fc-list-day-cushion {
+		@apply bg-transparent p-4;
+	}
+
+	.fc-scrollgrid {
+		@apply rounded-xl border-b;
+	}
+
+	.fc-col-header-cell-cushion {
+		@apply text-heading-foreground/50 py-4;
+	}
+
+	.fc-daygrid-day {
+
+		&:nth-last-child(-n+3) {
+
+			.lqd-event-card {
+				@apply start-auto end-full ms-0;
+			}
+		}
+	}
+
+	.fc-daygrid-day-number {
+		@apply inline-grid place-items-center text-base size-[30px] p-0 m-1 rounded-full md:m-3;
+	}
+
+	.fc-day-today {
+
+		.fc-daygrid-day-number {
+			@apply bg-primary text-primary-foreground font-semibold;
+		}
+	}
+
+
+
+	.fc-event {
+		@apply rounded-[10px] bg-heading-foreground/10 text-heading-foreground text-2xs font-medium p-1.5 border-none z-auto hover:z-10 sm:p-2.5 max-sm:justify-center;
+
+		.fc-event-main {
+			@apply text-current static;
+		}
+
+		&:hover {
+
+			.lqd-event-card {
+				@apply visible translate-y-0 opacity-100;
+			}
+		}
+
+		&.lqd-event-instagram {
+			background-color: rgb(216 28 100 / 11%);
+		}
+
+		&.lqd-event-facebook {
+			background-color: rgb(19 208 218 / 14%);
+		}
+
+		&.lqd-event-linkedin {
+			background-color: rgb(10 120 230 / 12%);
+		}
+
+		&.lqd-event-tiktok {
+			background-color: rgb(0 0 0 / 5%);
+		}
+	}
+
+	.fc-timeGridWeek-view,
+	.fc-timeGridDay-view {
+
+		.fc-scrollgrid-section {
+
+			// trying to target the all-day section
+			&:first-child {
+
+				.fc-scroller-harness {
+
+					&,
+					>.fc-scroller {
+						overflow: visible !important;
+					}
+				}
+			}
+		}
+	}
+
+	.fc-dayGridMonth-view {
+
+		.fc-daygrid-body {
+
+			tr {
+
+				&:nth-last-child(-n+3) {
+
+					.lqd-event-card {
+						@apply top-auto bottom-0;
+					}
+				}
+			}
+		}
+	}
+
+	.fc-timeGridDay-view,
+	.fc-listWeek-view {
+
+		.fc-event {
+			@apply relative;
+
+			div.lqd-event-card {
+				@apply top-full bottom-auto start-3 end-auto;
+			}
+		}
+	}
+
+	.fc-dayGridMonth-view,
+	.fc-timeGridWeek-view {
+
+		.lqd-event-info {
+			@apply max-sm:hidden;
+		}
+	}
+}
+
+.theme-dark {
+	// DO NOT REMOVE THIS VAR
+	--fc-border-color: hsl(var(--border));
+}

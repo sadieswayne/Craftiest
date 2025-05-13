@@ -1,0 +1,1 @@
+UPDATE `extensions` SET `price` = 39, `fake_price` = 0 WHERE `slug` = 'wordpress';

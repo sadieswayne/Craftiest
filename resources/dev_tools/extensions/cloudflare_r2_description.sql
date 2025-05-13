@@ -1,0 +1,1 @@
+UPDATE `extensions` SET `description` = 'Experience enhanced security, lightning-fast performance, and limitless scalability with MagicAI & CloudFlare.' WHERE `slug` = 'cloudflare-r2';

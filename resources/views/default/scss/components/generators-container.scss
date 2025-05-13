@@ -1,0 +1,24 @@
+@keyframes lqd-generators-container-slide-in {
+	from {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+}
+
+@keyframes lqd-generators-container-scale-down {
+	to {
+		transform: scale(0.985);
+		opacity: 0;
+	}
+}
+
+::view-transition-old(lqd-generators-container) {
+	animation: lqd-generators-container-scale-down 0.3s cubic-bezier(0.23, 1, 0.320, 1) both;
+}
+::view-transition-new(lqd-generators-container) {
+	animation: lqd-generators-container-slide-in 0.3s cubic-bezier(0.23, 1, 0.320, 1) both;
+}
+
+.lqd-generators-container {
+	view-transition-name: lqd-generators-container;
+}

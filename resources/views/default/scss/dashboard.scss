@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './base/vars';
+
+@layer base {
+
+	*,
+	*:before,
+	*:after {
+		border-color: hsl(var(--border));
+	}
+
+	:focus-visible {
+		outline-color: theme('colors.secondary.DEFAULT');
+	}
+
+	button,
+	select {
+		font: inherit;
+		text-transform: unset;
+		letter-spacing: inherit;
+	}
+
+	[x-cloak] {
+		display: none !important;
+	}
+}
+
+@layer utilities {
+	.collapse {
+		visibility: unset;
+	}
+
+	.form-select {
+		padding: 1em 1.23em;
+		font-size: 0.8125rem;
+		line-height: 1.4285714286;
+		border: var(--tblr-border-width) solid var(--tblr-border-color);
+		border-radius: var(--tblr-border-radius);
+	}
+
+	[dir='rtl'] .form-select {
+		background-position: left 0.5rem center;
+	}
+}
+
+@import './base/base';
+@import './base/typography';
+
+@import './layout/layout';
+@import './panel/panel';
+@import './components/components';
+
+@import './focus-mode/focus-mode';
+@import './advanced-image-editor/advanced-image-editor';

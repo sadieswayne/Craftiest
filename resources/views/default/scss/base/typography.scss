@@ -1,0 +1,32 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0.5rem;
+	font-family: var(--headings-font-family);
+	line-height: var(--headings-line-height);
+	font-weight: var(--headings-font-weight);
+	font-style: var(--headings-font-style);
+	text-transform: var(--headings-text-transform);
+	letter-spacing: var(--headings-letter-spacing);
+	color: var(--headings-color);
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		font-family: var(--h#{$i}-font-family, var(--headings-font-family));
+		font-size: var(--h#{$i}-font-size, var(--headings-font-size));
+		line-height: var(--h#{$i}-line-height, var(--headings-line-height));
+		font-weight: var(--h#{$i}-font-weight, var(--headings-font-weight));
+		font-style: var(--h#{$i}-font-style, var(--headings-font-style));
+		text-transform: var(--h#{$i}-text-transform, var(--headings-text-transform));
+		letter-spacing: var(--h#{$i}-letter-spacing, var(--headings-letter-spacing));
+		color: var(--h#{$i}-color, var(--headings-color));
+	}
+}
+
+p {
+	margin-bottom: 0.5rem;
+}

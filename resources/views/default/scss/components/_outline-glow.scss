@@ -1,0 +1,90 @@
+@keyframes outline-glow-1 {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes outline-glow-2 {
+	0% {
+		transform: translate(-88%, -50%) rotate(0deg);
+	}
+
+	33% {
+		transform: translate(-12%, -50%) rotate(0deg);
+	}
+
+	50% {
+		transform: translate(-12%, -50%) rotate(180deg);
+	}
+
+	83% {
+		transform: translate(-88%, -50%) rotate(180deg);
+	}
+
+	100% {
+		transform: translate(-88%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes outline-glow-3 {
+	0% {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+
+	10% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(calc(360deg * var(--outline-glow-iteration, 3)));
+		opacity: 0;
+	}
+}
+
+.lqd-outline-glow {
+	--glow-color-primary: var(--primary, 0 0% 100%);
+	inset: calc(var(--outline-glow-w, 1px) * -1);
+	padding: var(--outline-glow-w, 1px);
+	background: transparent;
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+}
+
+.lqd-outline-glow-effect-1 {
+
+	.lqd-outline-glow-inner {
+		background: conic-gradient(from 290deg, hsl(var(--glow-color-secondary, 0 0% 100% / 0%)) 0%, hsl(var(--glow-color-primary)) 10%, hsl(var(--glow-color-secondary, 0 0% 100% / 0%)) 20%);
+		animation: outline-glow-1 var(--outline-glow-duration, 3s) linear var(--outline-glow-iteration, infinite);
+	}
+}
+
+.lqd-outline-glow-effect-2 {
+
+	.lqd-outline-glow-inner {
+		background: conic-gradient(from 290deg at 50%, hsl(var(--glow-color-secondary, 0 0% 100% / 0%)) 0%, hsl(var(--glow-color-primary)) 20%, hsl(var(--glow-color-secondary, 0 0% 100% / 0%)) 25%);
+		animation: outline-glow-2 var(--outline-glow-duration, 3s) linear var(--outline-glow-iteration, infinite);
+	}
+}
+
+// designed to disappear after a few iterations
+.lqd-outline-glow-effect-3 {
+
+	.lqd-outline-glow-inner {
+		background: conic-gradient(from 0deg, transparent 0%, hsl(var(--glow-color-primary)) 10%, hsl(var(--glow-color-secondary)) 20%, transparent 30%);
+		animation: outline-glow-3 calc(var(--outline-glow-duration, 3s) * var(--outline-glow-iteration, 3)) linear;
+	}
+}

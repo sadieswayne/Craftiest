@@ -1,0 +1,10 @@
+.lqd-image-generator-stablediffusion-form,
+.lqd-image-generator-inputs-wrap {
+
+	button[type=submit] {
+
+		svg {
+			@apply rtl:rotate-180;
+		}
+	}
+}
