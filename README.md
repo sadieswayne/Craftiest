@@ -1,6 +1,6 @@
 # 📦 Craft AI – The All in One AI Creation Platform
 
-**Craft AI** is an extensible, multimodal AI platform built for creators, develope, businesses, and teams to build, generate, and automate content across text, image, audio, video, and code all from one unified workspace.
+**Craft AI** is an extensible, multimodal AI platform built for creators, developers, businesses, and teams to build, generate, and automate content across text, image, audio, video, and code all from one unified workspace.
 
 > Create smarter. Scale faster. Automate everything.
 
